@@ -36,6 +36,7 @@
         <commons-lang3.version>3.4</commons-lang3.version>
         <http-client.version>4.5.2</http-client.version>
         <guava.version>21.0</guava.version>
+        <lombok.version>1.16.8</lombok.version>
     </properties>
 
     <dependencies>
