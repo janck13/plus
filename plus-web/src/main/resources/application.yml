@@ -2,3 +2,31 @@ server:
   compression:
     enabled: true
   port: 9000
+
+spring:
+  #jackson日期转换
+  jackson:
+    data-format: "yyyy-MM-dd HH:mm:ss"
+
+  #连接池
+  datasource:
+    name: test
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://139.199.226.43:3306/lvddy?allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    connectionInitSqls: set names utf8mb4
+  jpa:
+   show-sql: true
